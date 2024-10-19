@@ -29,9 +29,11 @@ const page = () => {
   }
   return (
     <div className='flex items-center bg-background min-h-screen'>
+              <div className="w-[50%] h-full absolute left-0 top-0 bg-gradient-to-br from-primary from-1% to-transparent to-30% "></div>
+              <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-transparent from-70% to-secondary to-99%"></div>
         <div className='flex flex-col max-w-[1000px] w-full font-nunito-sans mx-auto items-center gap-4' >
-            <h1 className='text-primary text-6xl font-semibold p-4'>
-                Which day are you planning for?
+            <h1 className='text-primary text-6xl font-bold p-4'>
+                Which day is your trip?
             </h1>
             <p className='text-highlight text-2xl max-w-[800px] text-center'>Tell us the day you're planning for and we'll fetch your schedule straight from your Google Calendar. </p>
             <form className='flex flex-col w-full font-nunito-sans text-highlight gap-2 max-w-[400px]' onSubmit={handleSubmit}>
