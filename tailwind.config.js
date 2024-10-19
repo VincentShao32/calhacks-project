@@ -14,10 +14,10 @@ module.exports = {
         background: "#E8E8E8",
         foreground: "var(--foreground)",
         // "primary": "#1383E5",
-        "primary": "#996FD6",
+        "primary": "#6038fb",
         //"primary": "#CEA3FF",
         "highlight": "#36454F",
-        "secondary": "#FFEE8C"
+        "secondary": "#60a4fb"
 
       },
     },
