@@ -4,10 +4,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-background">
-      <div className="w-[50%] h-full absolute left-0 top-0 bg-gradient-to-br from-primary from-1% to-transparent to-30% "></div>
-      <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-transparent from-70% to-secondary to-99%"></div>
-      <div className="flex items-center w-full min-h-screen z-10">
+    <div className="w-full min-h-screen bg-transparent">
+      <div className="flex items-center w-full min-h-screen">
         <div className="flex flex-col w-fit mx-auto items-center gap-4">
           <h1 className="text-7xl font-bold font-nunito-sans text-primary">
             Automate your trip planning
@@ -25,7 +23,7 @@ export default function Home() {
             <SignedIn>
               <Link
                 href="/trips"
-                className="bg-highlight text-white rounded-full py-2 px-4 text-lg hover:bg-gray-600 transition ease-in-out"
+                className="bg-highlight text-white rounded-full py-2 px-4 text-lg hover:bg-gray-600 transition ease-in-out "
               >
                 Get Started
               </Link>
@@ -37,6 +35,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="w-[50%] h-full absolute left-0 top-0 bg-gradient-to-br from-primary from-1% to-background to-30% -z-10"></div>
+      <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10"></div>
     </div>
   );
 }
