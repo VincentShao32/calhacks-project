@@ -31,7 +31,7 @@ const page = () => {
     <div className='flex items-center bg-background min-h-screen'>
               <div className="w-[50%] h-full absolute left-0 top-0 bg-gradient-to-br from-primary from-1% to-transparent to-30% "></div>
               <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-transparent from-70% to-secondary to-99%"></div>
-        <div className='flex flex-col max-w-[1000px] w-full font-nunito-sans mx-auto items-center gap-4' >
+        <div className='flex flex-col max-w-[1000px] w-full font-nunito-sans mx-auto items-center gap-4 z-10' >
             <h1 className='text-primary text-6xl font-bold p-4'>
                 Which day is your trip?
             </h1>

@@ -7,7 +7,7 @@ export default function Home() {
     <div className="w-full min-h-screen bg-background">
       <div className="w-[50%] h-full absolute left-0 top-0 bg-gradient-to-br from-primary from-1% to-transparent to-30% "></div>
       <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-transparent from-70% to-secondary to-99%"></div>
-      <div className="flex items-center w-full min-h-screen">
+      <div className="flex items-center w-full min-h-screen z-10">
         <div className="flex flex-col w-fit mx-auto items-center gap-4">
           <h1 className="text-7xl font-bold font-nunito-sans text-primary">
             Automate your trip planning
