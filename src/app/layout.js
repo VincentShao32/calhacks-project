@@ -42,12 +42,12 @@ export default function RootLayout({ children }) {
             rel="stylesheet"
           />
           <Navbar />
-          <SignedOut>
+          {/* <SignedOut>
             <SignInButton />
           </SignedOut>
           <SignedIn>
             <UserButton />
-          </SignedIn>
+          </SignedIn> */}
           <ConvexClientProvider>{children}</ConvexClientProvider>
         </body>
       </html>
