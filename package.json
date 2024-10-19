@@ -13,7 +13,6 @@
     "@clerk/nextjs": "^5.7.5",
     "convex": "^1.16.6",
     "next": "14.2.15",
-    "next-auth": "^4.24.8",
     "react": "^18",
     "react-dom": "^18"
   },

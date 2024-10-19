@@ -1,23 +1,20 @@
 "use client";
 import { SignInButton } from "@clerk/nextjs";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  // const { userId } = auth();
-  // useEffect(() => {
-  //   async function get_oauth() {
-  //     if (!userId) {
-  //       return;
-  //     }
-  //     const provider = "oauth_google";
-  //     const clerkResponse = await clerkClient().users.getUserOauthAccessToken(
-  //       userId,
-  //       provider
-  //     );
-  //     const accessToken = clerkResponse[0].token || "";
-  //   }
-  //   get_oauth();
-  // }, [userId]);
+  const [googleToken, setGoogleToken] = useState("");
+
+  useEffect(() => {
+    async function getOAuthToken() {
+      const res = await fetch("/api/get-oauth");
+      if (res) {
+        const token = await res.json();
+        setGoogleToken(token);
+      }
+    }
+    getOAuthToken();
+  });
 
   return (
     <div className=" bg-background w-full min-h-screen">

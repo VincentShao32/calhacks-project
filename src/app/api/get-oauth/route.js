@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server'
 
 export const dynamic = 'force-dynamic' // defaults to auto
 export async function GET() {
-    console.log("run")
+    //console.log("run")
 
     const { userId } = auth()
 
@@ -16,12 +16,12 @@ export async function GET() {
     const provider = 'oauth_google'
   
     const clerkResponse = await clerkClient().users.getUserOauthAccessToken(userId, provider)
-    console.log(clerkResponse)
+    //console.log(clerkResponse)
     const accessToken = clerkResponse.data[0].token || ''
   
-    // if (!accessToken) {
-    //   return NextResponse.json({ message: 'Access token not found' }, { status: 401 })
-    // }
-    // console.log(accessToken)
-    return NextResponse.json({message: "success"}, {stats: 200})
+    if (!accessToken) {
+      return NextResponse.json({ message: 'Access token not found' }, { status: 401 })
+    }
+    //console.log(accessToken)
+    return NextResponse.json(accessToken, {status: 200})
 }
