@@ -34,7 +34,7 @@ export default function Home() {
 
           <div className="flex gap-5 pt-8">
             <SignedOut>
-              <SignInButton className="py-3 z-10  px-4 bg-highlight text-[#eadef7] rounded-full text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md active:bg-[#6038fb] transition-all ease-in-out duration-300">
+              <SignInButton className="bg-highlight text-white rounded-full py-2 px-4 text-lg hover:bg-gray-600">
                 Get Started
               </SignInButton>
             </SignedOut>
