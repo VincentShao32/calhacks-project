@@ -75,10 +75,10 @@ export default function Home() {
           <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text">
             Explore Our Plan
           </h2>
-          <p className="text-2xl text-white text-center max-w-6xl">
-            Incredibly simple Don't explain every detail of your plan — Just
-            mention a date, and DayGeine will scan your Google Calendar to come
-            up with the perfect recommendations that align with your sechedule.
+          <p className="text-2xl text-white text-center max-w-[700px]">
+            Just mention a date, and DayGenie will scan your Google Calendar to
+            come up with the perfect recommendations that align with your
+            schedule.
           </p>
         </div>
       </div>

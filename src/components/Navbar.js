@@ -40,18 +40,11 @@ const Navbar = () => {
     >
       <div className="mx-auto w-fit flex gap-9 justify-between text-2xl">
         <Link
-          href="/trips"
+          href="/"
           className="px-3 py-1 rounded-md hover:bg-blue-300/50 transition-all duration-300 ease-in-out"
         >
           Home
         </Link>
-        <button
-          href="/"
-          onClick={handleScrollToSection}
-          className="px-3 py-1 rounded-md hover:bg-blue-300/50 transition-all duration-300 ease-in-out"
-        >
-          About
-        </button>
         <SignedIn>
           <Link
             href="/"
