@@ -11,7 +11,8 @@ module.exports = {
         "nunito-sans": ['Nunito Sans', 'sans-serif']
       },
       colors: {
-        background: "#E8E8E8",
+        background: "#0e1015",
+        //background: "#E8E8E8",
         foreground: "var(--foreground)",
         // "primary": "#1383E5",
         "primary": "#6038fb",
