@@ -34,7 +34,7 @@ const page = () => {
     if (date === "" || startingAddress === "") {
         return
     }
-    const google_auth_token = "ya29.a0AcM612xAthYX1eMoSdZc0_JuHNHBaQ2QAvTS_3nug-aGPKRpUd5wwCnKJ-rR1N1e-5rEuTamP6HDhjp1D3b3Fi8A9VAPT_JdF6VqNgGf247YNdRS-yw-ngnXp3sSJ7S6XHhHXcv-euCfBMeGbC-VHJor2CndqJpEOwnyrMGAjwaCgYKAUMSARESFQHGX2MiIDLOuAmpRJ6JDpxsUd3QFA0177"
+    const google_auth_token = "ya29.a0AcM612xUWCoje6zkzTIU0Cgy0V-q07-wnO4UKllt2qPyjy_cDRMKYolRxPMg4CrcNisVlsPZy6mLwUqqp_59nGIVo7QWZ9kaqnAH0X3u9O5dtdw3gd63aXLA3jT5-dWNkr6dcHkVXZT-W1e4FL34kzkHG0BUrvAGWmIGu3kvaCgYKAVQSARESFQHGX2MiCFcLeHoagS25fWIeBvij9g0175"
     const res = await fetch("http://localhost:8001/send-message", {
         method: "POST",
         body: JSON.stringify({ token: google_auth_token, preference: preferences, start_date: start_date, end_date: end_date, starting_address: startingAddress }),
