@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full flex p-4 fixed bg-transparent text-highlight text-white font-nunito-sans z-10 transition-transform duration-300 ease-in-out ${
+      className={`w-full flex p-4 fixed bg-transparent  text-white font-nunito-sans z-10 transition-transform duration-300 ease-in-out ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >

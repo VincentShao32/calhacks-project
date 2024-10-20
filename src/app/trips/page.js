@@ -6,7 +6,7 @@ const page = () => {
 
     const [date, setDate] = useState("")
     const [preferences, setPreferences] = useState("")
-
+    const [startingAddress, setStartingAddress] = useState("")
     
     async function getOAuthToken() {
         const res = await fetch("/api/get-oauth");
@@ -31,9 +31,13 @@ const page = () => {
     start_date = start_date.toISOString().substring(0, 19) + "-07:00"
     end_date = end_date.toISOString().substring(0, 19) + "-07:00"
     console.log(start_date)
+    if (date === "" || startingAddress === "") {
+        return
+    }
+    const google_auth_token = "ya29.a0AcM612xY8SrmWwTRxsvTokVqIZWRnKUQ_uSFPdmpgHTMNl6twESvIa2n4fChrDN73Dx_RvmljpDNZJtSiulzsiBVMqZY0X3L_ru2sIqKk73Saja0ouIaXJZ3z6ACoTPRPdiRtRnl_G2uzzbAwUALBZ7Ul-6UjT9r2UtNr_BW6QaCgYKARMSARESFQHGX2MiJdhzZ226YgmB6yDo8FWKEg0177"
     const res = await fetch("http://localhost:8001/send-message", {
         method: "POST",
-        body: JSON.stringify({ token: "ya29.a0AcM612xcTNlkkDLXn8-Zpmy4pvE_hbKHukMghTST6pqWkJiHWeXZJlslNs2m07SNm56cIlPHJOc6J1jrBHSCE2hVgJJAjBriTManl8lLqoN5BIksn14xCVJS-VJwPRNTlLcYfb7Yrdd5GMbux_kfmRrLUBB2ChlmiU9Ips-HaCgYKAVESARESFQHGX2MiuVFAnuDE_1UYVCHepKmRYg0175", preference: preferences, start_date: start_date, end_date: end_date }),
+        body: JSON.stringify({ token: google_auth_token, preference: preferences, start_date: start_date, end_date: end_date, starting_address: startingAddress }),
     })
     // console.log(google_token)
   }
@@ -45,11 +49,13 @@ const page = () => {
             <h1 className='text-primary text-6xl text-[##36454F] font-bold p-4'>
                 Which day for planning?
             </h1>
-            <p className='text-highlight text-[#eadef7] text-2xl max-w-[800px] text-center mb-8'>"Choose a day, and we’ll help turn it so much convenient." </p>
+            <p className='text-highlight text-2xl max-w-[800px] text-center mb-8'>"Choose a day, and we’ll help turn it so much more convenient." </p>
             <form className='flex flex-col w-full font-nunito-sans text-highlight gap-3 max-w-[400px]' onSubmit={handleSubmit}>
-                <label className='mx-auto text-[#eadef7] text-primary text-l'>Date for your planned day</label>
-                <input className='rounded w-full p-2 text-gray-400 placeholder: text-gray-500' type="date" onChange={(e) => setDate(e.target.value)}/>
-                <label className='mx-auto text-[#eadef7] text-primary text-l'>Preferences</label>
+                <label className='mx-auto text-primary text-lg'>Date for your planned day</label>
+                <input className='rounded w-full p-2 text-gray-400 placeholder:text-gray-500' type="date" onChange={(e) => setDate(e.target.value)}/>
+                <label className='mx-auto text-primary text-lg'>Starting Address</label>
+                <input className='rounded w-full p-2 text-gray-400 placeholder:text-gray-500' type="text" onChange={(e) => setStartingAddress(e.target.value)} placeholder="Where are you starting your trip from?"/>
+                <label className='mx-auto text-primary text-lg'>Preferences</label>
                 <textarea
                   className='rounded p-2 placeholder:text-gray-400'
                   placeholder="Tell us Anything! 🌯 A quick lunch on the way between classes."
