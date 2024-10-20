@@ -23,7 +23,7 @@ export default function Home() {
               DayGeine
             </span>
           </h1>
-          <h1 className="text-4xl text-[#FFFFF] font-nunito-sans text-highlight">
+          <h1 className="text-4xl text-[#eadef7] py-2 font-nunito-sans text-highlight">
             from anywhere, to anywhere, within seconds
           </h1>
 
@@ -80,15 +80,15 @@ export default function Home() {
           <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text">
             How it Works
           </h2>
-          <p className="text-lg text-gray-700 text-center max-w-3xl">
-            WorkFlow Chart
+          <p className="text-gray-300 text-cente text-3xl py-7 max-w-5xl">
+            We use Multi Agent WorkFlows
           </p>
           <Image
             src={FlowChart}
             alt="Workflow"
-            width={800}
-            height={600}
-            className="w-full max-w-3xl"
+            width={1000}
+            height={2000}
+            className="w-full max-w-4xl"
           />
         </div>
       </div>
