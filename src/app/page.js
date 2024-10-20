@@ -4,10 +4,15 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import FlowChart from "../images/FlowChart.png";
+import sponsor1 from "../images/groq.png";
+import sponsor2 from "../images/fetchai.png";
+import sponsor3 from "../images/clerk.png";
+import sponsor4 from "../images/React.png";
 
 export default function Home() {
+
   const handleScrollToTrips = () => {
-    const tripsSection = document.getElementById("trips-section");
+    const tripsSection = document.getElementById("explore-section");
     if (tripsSection) {
       tripsSection.scrollIntoView({ behavior: "smooth" });
     }
@@ -19,32 +24,30 @@ export default function Home() {
         <div className="flex flex-col w-fit mx-auto items-center gap-5">
           <h1 className="text-7xl font-bold font-nunito-sans">
             <span className="text-[#6038fb]">Try </span>
-            <span className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent bg-clip-text md-15">
               DayGenie
             </span>
           </h1>
-          <h1 className="text-4xl text-[#FFFFF] font-nunito-sans text-white">
+          <h1 className="text-4xl text-[#eadef7] font-nunito-sans text-white">
             from anywhere, to anywhere, within seconds
           </h1>
 
           <div className="flex gap-5 pt-8">
             <SignedOut>
-              <SignInButton className="bg-highlight text-white rounded-full py-2 px-4 text-lg z-10 hover:bg-[#6038fb] hover:scale-105 hover:shadow-md transition-all ease-in-out duration-300">
+              <SignInButton className="bg-highlight text-white rounded-full py-2 px-4 text-lg hover:bg-gray-600">
                 Get Started
               </SignInButton>
             </SignedOut>
             <SignedIn>
-              <Link
-                href="/trips"
-                onClick={handleScrollToTrips}
-                className="py-2 z-10 px-4 bg-highlight text-white rounded-full text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md transition-all ease-in-out duration-300"
-              >
-                Get Started
-              </Link>
+
             </SignedIn>
-            <button className="bg-[#eadef7] z-10 py-2 px-4 border-1 border-highlight text-gray-700 rounded-full text-lg hover:bg-[#6038fb] transition ease-in-out duration-300 hover:text-white">
-              Learn More
-            </button>
+            <Link
+                href="/"
+                onClick={handleScrollToTrips}
+                className="py-3 z-10  px-4 bg-highlight text-[#eadef7] rounded-full text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md active:bg-[#6038fb] transition-all ease-in-out duration-300"
+              >
+                Learn More
+              </Link>
           </div>
         </div>
       </div>
@@ -69,7 +72,7 @@ export default function Home() {
       {/* <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10 transition-colors duration-1000"></div>
       <div className="w-[50%] h-full absolute right-0 top-full bg-gradient-to-bl from-secondary from-1% to-transparent to-30% -z-10 transition-colors duration-1000"></div> */}
 
-      <div className="min-h-screen flex items-center" id="trips-section">
+      <div className="min-h-screen flex items-center" id="explore-section">
         <div className="flex flex-col items-center gap-8 py-20 mx-auto">
           <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text">
             Explore Our Plan
@@ -111,16 +114,65 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="min-h-screen flex items-center">
-        <div className="flex flex-col items-center gap-5 ">
-          <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text">
-            Ready to Travel?
+      <div className="relative min-h-screen flex items-center pl-16 flex-col">
+        <div className="flex flex-col items-center gap-8 ">
+          <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text gap-20">
+            Ready for a easier day?
           </h2>
-          <p className="text-lg text-white text-center max-w-3xl">
-            Sign up today and start planning your next adventure. With DayGenie,
-            the possibilities are endless!
+          <p className="text-2xl text-white text-center gap-8 max-w-3xl leading-relaxed">
+            Sign up today and get your day planned!
           </p>
+          <SignedOut>
+              <SignInButton className="bg-highlight text-white rounded-full py-2 px-4 gap-20 text-lg hover:bg-gray-600 z-10">
+                Sign In
+              </SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <Link
+                href="/"
+                onClick={handleScrollToTrips}
+                className="py-3 z-10  px-4 bg-highlight text-[#eadef7] rounded-full text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md active:bg-[#6038fb] transition-all ease-in-out duration-300"
+              >
+                Sign Up
+              </Link>
+            </SignedIn>
+            <div className="bottom-20 right-10 ">
+              <h3 className="text-[#eadef7] text-3xl font-bold text-center mb-2">
+                Our Sponsors
+              </h3>
+              <div className="flex gap-6">
+              <Image
+                src={sponsor1}
+                alt="groq"
+                // width={150}
+                // height={150}
+                className="rounded-lg shadow-lg object-scale-down w-[150px] h-[200px]"
+              />
+              <Image
+                src={sponsor2}
+                alt="fetchai"
+                // width={150}
+                // height={69}
+                className="rounded-lg shadow-lg object-scale-down w-[300px] h-300px]"
+              />
+              <Image
+                src={sponsor3}
+                alt="clerk"
+                // width={150}
+                // height={150}
+                className="rounded-lg shadow-lg object-scale-down w-[200px] h-[200px]"
+              />
+              <Image
+                src={sponsor4}
+                alt="React"
+                // width={150}
+                // height={150}
+                className="rounded-lg shadow-lg object-scale-down w-[200px] h-[200px]"
+              />
+            </div>
+          </div>
         </div>
+        
       </div>
     </div>
   );

@@ -25,28 +25,36 @@ const Navbar = () => {
     };
   }, [lastScrollY]);
 
+  const handleScrollToSection = () => {
+    const section = document.getElementById("explore-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div
-      className={`w-full flex p-4 fixed bg-transparent  text-white font-nunito-sans z-10 transition-transform duration-300 ease-in-out ${
+      className={`w-full flex p-4 fixed bg-transparent text-highlight text-white font-nunito-sans z-10 transition-transform duration-300 ease-in-out ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="mx-auto w-fit flex gap-9 justify-between text-xl">
+      <div className="mx-auto w-fit flex gap-9 justify-between text-2xl">
         <Link
-          href="/"
+          href="/trips"
           className="px-3 py-1 rounded-md hover:bg-blue-300/50 transition-all duration-300 ease-in-out"
         >
           Home
         </Link>
-        <Link
+        <button
           href="/"
+          onClick={handleScrollToSection}
           className="px-3 py-1 rounded-md hover:bg-blue-300/50 transition-all duration-300 ease-in-out"
         >
           About
-        </Link>
+        </button>
         <SignedIn>
           <Link
-            href="/trips"
+            href="/"
             className="px-3 py-1 rounded-md hover:bg-blue-300/50 transition-all duration-300 ease-in-out"
           >
             Plan a Trip
