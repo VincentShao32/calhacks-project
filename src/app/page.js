@@ -8,6 +8,7 @@ import sponsor1 from "../images/groq.png";
 import sponsor2 from "../images/fetchai.png";
 import sponsor3 from "../images/clerk.png";
 import sponsor4 from "../images/React.png";
+import reddit from "../images/reddit.png";
 
 export default function Home() {
 
@@ -78,7 +79,8 @@ export default function Home() {
             Explore Our Plan
           </h2>
           <p className="text-2xl text-white text-center max-w-6xl">
-            The process is incredibly simple: Don't explain every detail of your
+            Incredibly simple
+            Don't explain every detail of your
             plan — Just mention a date, and DayGeine will scan your Google
             Calendar to come up with the perfect recommendations that align with
             your sechedule.
