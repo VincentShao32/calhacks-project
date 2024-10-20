@@ -36,26 +36,26 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 
   async function handleSubmit(e) {
     e.preventDefault();
-    // setLoading(true)
-    // await delay(5000)
-    // setLoading(false)
-    // //const google_token = await getOAuthToken()
-    // setSubmitted(true)
+    setLoading(true)
+    await delay(7000)
+    setLoading(false)
+    //const google_token = await getOAuthToken()
+    setSubmitted(true)
     
-    var start_date = new Date(date)
-    var end_date = new Date(date)
-    end_date.setDate(start_date.getDate() + 1)
-    start_date = start_date.toISOString().substring(0, 19) + "-07:00"
-    end_date = end_date.toISOString().substring(0, 19) + "-07:00"
-    console.log(start_date)
-    if (date === "" || startingAddress === "") {
-        return
-    }
-    const google_auth_token = "ya29.a0AcM612y1B3-FZ9CjoSPJkxWc4GGI2KBzZAVCN0DOMH1Tu4IYdbJr0tcGlT_kGIfTRms2oiuaylHB0d1fR_ZuYiEGYvxRMEcAVDQs_-yfSGFb2UK0Pm4pMTwWYcsB_ikSWAWpeLbtiZ5quL53YtwsKCLNhfo-YcxSGJY9bMrtaCgYKAfASARESFQHGX2MieI5kNAlpWwIbFT3R-YDcSQ0175"
-    const res = await fetch("http://localhost:8006/send-message", {
-        method: "POST",
-        body: JSON.stringify({ token: google_auth_token, preference: preferences, start_date: start_date, end_date: end_date, starting_address: startingAddress }),
-    })
+    // var start_date = new Date(date)
+    // var end_date = new Date(date)
+    // end_date.setDate(start_date.getDate() + 1)
+    // start_date = start_date.toISOString().substring(0, 19) + "-07:00"
+    // end_date = end_date.toISOString().substring(0, 19) + "-07:00"
+    // console.log(start_date)
+    // if (date === "" || startingAddress === "") {
+    //     return
+    // }
+    // const google_auth_token = "ya29.a0AcM612y1B3-FZ9CjoSPJkxWc4GGI2KBzZAVCN0DOMH1Tu4IYdbJr0tcGlT_kGIfTRms2oiuaylHB0d1fR_ZuYiEGYvxRMEcAVDQs_-yfSGFb2UK0Pm4pMTwWYcsB_ikSWAWpeLbtiZ5quL53YtwsKCLNhfo-YcxSGJY9bMrtaCgYKAfASARESFQHGX2MieI5kNAlpWwIbFT3R-YDcSQ0175"
+    // const res = await fetch("http://localhost:8006/send-message", {
+    //     method: "POST",
+    //     body: JSON.stringify({ token: google_auth_token, preference: preferences, start_date: start_date, end_date: end_date, starting_address: startingAddress }),
+    // })
     //console.log(google_token)
   }
   return (
