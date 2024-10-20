@@ -42,12 +42,22 @@ export default function Home() {
   //   };
   // }, []);
 
+  const handleScrollToTrips = () => {
+    const tripsSection = document.getElementById("trips-section");
+    if (tripsSection) {
+      tripsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="w-full min-h-screen bg-transparent">
       <div className="flex items-center w-full min-h-screen">
         <div className="flex flex-col w-fit mx-auto items-center gap-5">
-          <h1 className="text-7xl font-bold font-nunito-sans bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent bg-clip-text">
-            Automate your trip planning
+          <h1 className="text-7xl font-bold font-nunito-sans">
+            <span className="text-[#6038fb]">Try </span>
+            <span className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent bg-clip-text">
+              DayGeine
+            </span>
           </h1>
           <h1 className="text-4xl font-nunito-sans text-highlight">
             from anywhere, to anywhere, within seconds
@@ -62,12 +72,12 @@ export default function Home() {
             <SignedIn>
               <Link
                 href="/trips"
+                onClick={handleScrollToTrips}
                 className="py-2 px-4 bg-highlight text-white rounded-full text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md transition-all ease-in-out duration-300"
               >
                 Get Started
               </Link>
             </SignedIn>
-
             <button className="bg-background py-2 px-4 border-1 border-highlight text-black rounded-full text-lg hover:bg-[#a6d8ff] transition ease-in-out duration-300 hover:text-black">
               Learn More
             </button>
@@ -76,6 +86,9 @@ export default function Home() {
       </div>
       <div className="w-[50%] h-full absolute left-0 top-0 bg-gradient-to-br from-primary from-1% to-background to-30% -z-10"></div>
       <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10"></div>
+      <div className="min-h-screen bg-background"></div>
+      <div className="min-h-screen bg-background"></div>
+      <div className="min-h-screen bg-background"></div>
       <div className="min-h-screen bg-background"></div>
     </div>
   );
