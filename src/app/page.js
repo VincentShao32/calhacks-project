@@ -4,13 +4,12 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import FlowChart from "../images/FlowChart.png";
-import sponsor1 from "../images/groq.png";
-import sponsor2 from "../images/fetchai.png";
-import sponsor3 from "../images/clerk.png";
-import sponsor4 from "../images/React.png";
+// import sponsor1 from "../images/groq.png";
+// import sponsor2 from "../images/fetchai.png";
+// import sponsor3 from "../images/clerk.png";
+// import sponsor4 from "../images/React.png";
 
 export default function Home() {
-
   const handleScrollToTrips = () => {
     const tripsSection = document.getElementById("explore-section");
     if (tripsSection) {
@@ -38,16 +37,14 @@ export default function Home() {
                 Get Started
               </SignInButton>
             </SignedOut>
-            <SignedIn>
-
-            </SignedIn>
+            <SignedIn></SignedIn>
             <Link
-                href="/"
-                onClick={handleScrollToTrips}
-                className="py-3 z-10  px-4 bg-highlight text-[#eadef7] rounded-full text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md active:bg-[#6038fb] transition-all ease-in-out duration-300"
-              >
-                Learn More
-              </Link>
+              href="/"
+              onClick={handleScrollToTrips}
+              className="py-3 z-10  px-4 bg-highlight text-[#eadef7] rounded-full text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md active:bg-[#6038fb] transition-all ease-in-out duration-300"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </div>
@@ -123,24 +120,24 @@ export default function Home() {
             Sign up today and get your day planned!
           </p>
           <SignedOut>
-              <SignInButton className="bg-highlight text-white rounded-full py-2 px-4 gap-20 text-lg hover:bg-gray-600 z-10">
-                Sign In
-              </SignInButton>
-            </SignedOut>
-            <SignedIn>
-              <Link
-                href="/"
-                onClick={handleScrollToTrips}
-                className="py-3 z-10  px-4 bg-highlight text-[#eadef7] rounded-full text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md active:bg-[#6038fb] transition-all ease-in-out duration-300"
-              >
-                Sign Up
-              </Link>
-            </SignedIn>
-            <div className="bottom-20 right-10 ">
-              <h3 className="text-[#eadef7] text-3xl font-bold text-center mb-2">
-                Our Sponsors
-              </h3>
-              <div className="flex gap-6">
+            <SignInButton className="bg-highlight text-white rounded-full py-2 px-4 gap-20 text-lg hover:bg-gray-600 z-10">
+              Sign In
+            </SignInButton>
+          </SignedOut>
+          <SignedIn>
+            <Link
+              href="/"
+              onClick={handleScrollToTrips}
+              className="py-3 z-10  px-4 bg-highlight text-[#eadef7] rounded-full text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md active:bg-[#6038fb] transition-all ease-in-out duration-300"
+            >
+              Sign Up
+            </Link>
+          </SignedIn>
+          <div className="bottom-20 right-10 ">
+            <h3 className="text-[#eadef7] text-3xl font-bold text-center mb-2">
+              Our Sponsors
+            </h3>
+            <div className="flex gap-6">
               <Image
                 src={sponsor1}
                 alt="groq"
@@ -172,7 +169,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );
