@@ -99,15 +99,15 @@ export default function Home() {
           <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text">
             How it Works
           </h2>
-          <p className="text-lg text-white text-center max-w-3xl">
-            WorkFlow Chart
+          <p className="text-gray-300 text-cente text-3xl py-7 max-w-5xl">
+            We use Multi Agent WorkFlows
           </p>
           <Image
             src={FlowChart}
             alt="Workflow"
-            width={800}
-            height={500}
-            className="w-full object-contain max-h-screen h-full"
+            width={1000}
+            height={2000}
+            className="w-full max-w-4xl"
           />
         </div>
       </div>
