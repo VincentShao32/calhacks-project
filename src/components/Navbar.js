@@ -47,7 +47,7 @@ const Navbar = () => {
         </Link>
         <SignedIn>
           <Link
-            href="/"
+            href="/trips"
             className="px-3 py-1 rounded-md hover:bg-blue-300/50 transition-all duration-300 ease-in-out"
           >
             Plan a Trip

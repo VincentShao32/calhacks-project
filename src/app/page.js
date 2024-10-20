@@ -34,7 +34,7 @@ export default function Home() {
 
           <div className="flex gap-5 pt-8">
             <SignedOut>
-              <SignInButton className="bg-highlight text-white rounded-full py-2 px-4 text-lg hover:bg-gray-600">
+              <SignInButton className="bg-highlight z-10 text-white rounded-full py-2 px-4 text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md active:bg-[#6038fb] transition-all ease-in-out duration-300">
                 Get Started
               </SignInButton>
             </SignedOut>
@@ -56,7 +56,6 @@ export default function Home() {
         <div className="min-h-screen h-full bg-gradient-to-br from-primary from-1% to-background to-30% -z-10"></div>
         <div className="min-h-screen h-full bg-gradient-to-bl from-background from-70% to-primary to-99% -z-10 "></div>
         <div className="min-h-screen h-full bg-gradient-to-br from-primary from-1% to-background to-30% -z-10"></div>
-        <div className="min-h-screen h-full bg-gradient-to-bl from-background from-70% to-primary to-99% -z-10 "></div>
       </div>
       <div className="absolute top-0 right-0 flex flex-col w-[50%] h-fit">
         <div className="h-full bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10 min-h-screen"></div>
@@ -64,7 +63,6 @@ export default function Home() {
         <div className="h-full bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10 min-h-screen"></div>
         <div className="h-full  bg-gradient-to-bl from-secondary from-1% to-background to-30% -z-10  min-h-screen"></div>
         <div className="h-full bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10 min-h-screen"></div>
-        <div className="h-full  bg-gradient-to-bl from-secondary from-1% to-background to-30% -z-10  min-h-screen"></div>
       </div>
 
       {/* <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10 transition-colors duration-1000"></div>
@@ -75,22 +73,10 @@ export default function Home() {
           <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text">
             Explore Our Plan
           </h2>
-          <p className="text-2xl text-white text-center max-w-[700px]">
+          <p className="text-2xl text-white text-center max-w-[700px] pt-8 font-semibold">
             Just mention a date, and DayGenie will scan your Google Calendar to
             come up with the perfect recommendations that align with your
             schedule.
-          </p>
-        </div>
-      </div>
-      <div className="min-h-screen flex items-center">
-        <div className="flex flex-col items-center gap-5 py-20 mx-auto">
-          <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text">
-            Why Choose DayGenie?
-          </h2>
-          <p className="text-2xl text-white text-center max-w-3xl">
-            We provide the best travel options tailored to your preferences,
-            ensuring you get to your dream destinations quickly, comfortably,
-            and affordably.
           </p>
         </div>
       </div>
