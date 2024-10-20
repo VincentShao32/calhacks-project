@@ -3,9 +3,9 @@ import { SignInButton, SignedOut, SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import FlowChart from "../images/FlowChart.png";
 
 export default function Home() {
-
   const handleScrollToTrips = () => {
     const tripsSection = document.getElementById("trips-section");
     if (tripsSection) {
@@ -17,12 +17,12 @@ export default function Home() {
     <div className="w-full min-h-screen bg-transparent">
       <div className="flex items-center w-full min-h-screen">
         <div className="flex flex-col w-fit mx-auto items-center gap-5">
-        <h1 className="text-7xl font-bold font-nunito-sans">
-          <span className="text-[#6038fb]">Try </span>
-          <span className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent bg-clip-text">
-            DayGeine
-          </span>
-        </h1>
+          <h1 className="text-7xl font-bold font-nunito-sans">
+            <span className="text-[#6038fb]">Try </span>
+            <span className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent bg-clip-text">
+              DayGeine
+            </span>
+          </h1>
           <h1 className="text-4xl text-[#FFFFF] font-nunito-sans text-highlight">
             from anywhere, to anywhere, within seconds
           </h1>
@@ -45,7 +45,6 @@ export default function Home() {
             <button className="bg-[#eadef7] py-2 px-4 border-1 border-highlight text-gray-700 rounded-full text-lg hover:bg-[#6038fb] transition ease-in-out duration-300 hover:text-white">
               Learn More
             </button>
-            
           </div>
         </div>
       </div>
@@ -82,15 +81,15 @@ export default function Home() {
             How it Works
           </h2>
           <p className="text-lg text-gray-700 text-center max-w-3xl">
-            WorkFlow Chart 
+            WorkFlow Chart
           </p>
           <Image
-          src="/FlowChart.png"
-          alt="Workflow"
-          width={800} 
-          height={600}
-          className="w-full max-w-3xl"
-        />
+            src={FlowChart}
+            alt="Workflow"
+            width={800}
+            height={600}
+            className="w-full max-w-3xl"
+          />
         </div>
       </div>
       <div className="min-h-screen bg-background transition-colors duration-1000">
