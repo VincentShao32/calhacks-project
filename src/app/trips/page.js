@@ -32,14 +32,14 @@ const page = () => {
               <div className="w-[50%] h-full absolute left-0 top-0 bg-gradient-to-br from-primary from-1% to-background to-30% -z-10 "></div>
               <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10"></div>
         <div className='flex flex-col max-w-[1000px] w-full font-nunito-sans mx-auto items-center gap-6 z-10' >
-            <h1 className='text-primary text-6xl font-bold p-4'>
+            <h1 className='text-primary text-6xl text-[##36454F] font-bold p-4'>
                 Which day for planning?
             </h1>
-            <p className='text-highlight text-2xl max-w-[800px] text-center mb-8'>"Choose a day, and we’ll help turn it so much convenient." </p>
+            <p className='text-highlight text-[#eadef7] text-2xl max-w-[800px] text-center mb-8'>"Choose a day, and we’ll help turn it so much convenient." </p>
             <form className='flex flex-col w-full font-nunito-sans text-highlight gap-3 max-w-[400px]' onSubmit={handleSubmit}>
-                <label className='mx-auto text-primary text-l'>Date for your planned day</label>
-                <input className='rounded w-full p-2 text-gray-400 placeholder:text-gray-500' type="date" onChange={(e) => setDate(e.target.value)}/>
-                <label className='mx-auto text-primary text-l'>Preferences</label>
+                <label className='mx-auto text-[#eadef7] text-primary text-l'>Date for your planned day</label>
+                <input className='rounded w-full p-2 text-gray-400 placeholder: text-gray-500' type="date" onChange={(e) => setDate(e.target.value)}/>
+                <label className='mx-auto text-[#eadef7] text-primary text-l'>Preferences</label>
                 <textarea
                   className='rounded p-2 placeholder:text-gray-400'
                   placeholder="Tell us Anything! 🌯 A quick lunch on the way between classes."
