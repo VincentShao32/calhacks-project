@@ -14,16 +14,16 @@ export default function Home() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-transparent">
+    <div className="w-full min-h-screen bg-transparent font-nunito-sans">
       <div className="flex items-center w-full min-h-screen">
         <div className="flex flex-col w-fit mx-auto items-center gap-5">
           <h1 className="text-7xl font-bold font-nunito-sans">
             <span className="text-[#6038fb]">Try </span>
             <span className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent bg-clip-text">
-              DayGeine
+              DayGenie
             </span>
           </h1>
-          <h1 className="text-4xl text-[#eadef7] py-2 font-nunito-sans text-highlight">
+          <h1 className="text-4xl text-[#FFFFF] font-nunito-sans text-white">
             from anywhere, to anywhere, within seconds
           </h1>
 
@@ -48,14 +48,33 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-[50%] h-full absolute left-0 top-0 bg-gradient-to-br from-primary from-1% to-background to-30% -z-10 transition-colors duration-1000"></div>
-      <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10 transition-colors duration-1000"></div>
-      <div className="min-h-screen bg-background" id="trips-section">
-        <div className="flex flex-col items-center gap-20 py-20">
+      <div className="w-[50%] h-full absolute left-0 top-0 bg-gradient-to-br from-primary from-1% to-background to-30% -z-10"></div>
+      <div className="absolute top-0 left-0 flex flex-col w-[50%] h-fit">
+        <div className="min-h-screen h-full bg-gradient-to-br from-primary from-1% to-background to-30% -z-10"></div>
+        <div className="min-h-screen h-full bg-gradient-to-bl from-background from-70% to-primary to-99% -z-10 "></div>
+        <div className="min-h-screen h-full bg-gradient-to-br from-primary from-1% to-background to-30% -z-10"></div>
+        <div className="min-h-screen h-full bg-gradient-to-bl from-background from-70% to-primary to-99% -z-10 "></div>
+        <div className="min-h-screen h-full bg-gradient-to-br from-primary from-1% to-background to-30% -z-10"></div>
+        <div className="min-h-screen h-full bg-gradient-to-bl from-background from-70% to-primary to-99% -z-10 "></div>
+      </div>
+      <div className="absolute top-0 right-0 flex flex-col w-[50%] h-fit">
+        <div className="h-full bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10 min-h-screen"></div>
+        <div className="h-full  bg-gradient-to-bl from-secondary from-1% to-background to-30% -z-10  min-h-screen"></div>
+        <div className="h-full bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10 min-h-screen"></div>
+        <div className="h-full  bg-gradient-to-bl from-secondary from-1% to-background to-30% -z-10  min-h-screen"></div>
+        <div className="h-full bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10 min-h-screen"></div>
+        <div className="h-full  bg-gradient-to-bl from-secondary from-1% to-background to-30% -z-10  min-h-screen"></div>
+      </div>
+
+      {/* <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10 transition-colors duration-1000"></div>
+      <div className="w-[50%] h-full absolute right-0 top-full bg-gradient-to-bl from-secondary from-1% to-transparent to-30% -z-10 transition-colors duration-1000"></div> */}
+
+      <div className="min-h-screen flex items-center" id="trips-section">
+        <div className="flex flex-col items-center gap-8 py-20 mx-auto">
           <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text">
             Explore Our Plan
           </h2>
-          <p className="text-3xl text-gray-500 text-center max-w-6xl">
+          <p className="text-2xl text-white text-center max-w-6xl">
             The process is incredibly simple: Don't explain every detail of your
             plan — Just mention a date, and DayGeine will scan your Google
             Calendar to come up with the perfect recommendations that align with
@@ -63,20 +82,20 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="min-h-screen bg-background transition-colors duration-1000">
-        <div className="flex flex-col items-center gap-5 py-20">
+      <div className="min-h-screen flex items-center">
+        <div className="flex flex-col items-center gap-5 py-20 mx-auto">
           <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text">
-            Why Choose DayGeine?
+            Why Choose DayGenie?
           </h2>
-          <p className="text-lg text-gray-700 text-center max-w-3xl">
+          <p className="text-2xl text-white text-center max-w-3xl">
             We provide the best travel options tailored to your preferences,
             ensuring you get to your dream destinations quickly, comfortably,
             and affordably.
           </p>
         </div>
       </div>
-      <div className="min-h-screen bg-background transition-colors duration-1000">
-        <div className="flex flex-col items-center gap-5 py-20">
+      <div className="min-h-screen flex items-center">
+        <div className="flex flex-col items-center  py-8 mx-auto">
           <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text">
             How it Works
           </h2>
@@ -92,13 +111,13 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="min-h-screen bg-background transition-colors duration-1000">
-        <div className="flex flex-col items-center gap-5 py-20">
+      <div className="min-h-screen flex items-center">
+        <div className="flex flex-col items-center gap-5 ">
           <h2 className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent text-6xl font-bold font-nunito-sans bg-clip-text">
             Ready to Travel?
           </h2>
-          <p className="text-lg text-gray-700 text-center max-w-3xl">
-            Sign up today and start planning your next adventure. With DayGeine,
+          <p className="text-lg text-white text-center max-w-3xl">
+            Sign up today and start planning your next adventure. With DayGenie,
             the possibilities are endless!
           </p>
         </div>
