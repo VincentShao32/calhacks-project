@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-
-    // const [typedText, setTypedText] = useState("");
+  // const [typedText, setTypedText] = useState("");
   // const fullText = "your day planned with us, everything you need";
   // const typingSpeed = 100;
 
@@ -42,7 +41,7 @@ export default function Home() {
   //     clearTimeout(stopTypingAfter10Sec);
   //   };
   // }, []);
-  
+
   return (
     <div className="w-full min-h-screen bg-transparent">
       <div className="flex items-center w-full min-h-screen">
@@ -77,6 +76,7 @@ export default function Home() {
       </div>
       <div className="w-[50%] h-full absolute left-0 top-0 bg-gradient-to-br from-primary from-1% to-background to-30% -z-10"></div>
       <div className="w-[50%] h-full absolute right-0 top-0 bg-gradient-to-br from-background from-70% to-secondary to-99% -z-10"></div>
+      <div className="min-h-screen bg-background"></div>
     </div>
   );
 }
