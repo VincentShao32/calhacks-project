@@ -2,45 +2,9 @@
 import { SignInButton, SignedOut, SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
-  // const [typedText, setTypedText] = useState("");
-  // const fullText = "your day planned with us, everything you need";
-  // const typingSpeed = 100;
-
-  // useEffect(() => {
-  //   let index = 0;
-  //   let repeatInterval;
-
-  //   const startTyping = () => {
-  //     const interval = setInterval(() => {
-  //       setTypedText((prev) => prev + fullText[index]);
-  //       index++;
-  //       if (index === fullText.length) {
-  //         clearInterval(interval);
-  //         setTimeout(() => {
-  //           setTypedText("");
-  //           index = 0;
-  //         }, 2000); // Pause for a second before resetting
-  //       }
-  //     }, typingSpeed);
-  //   };
-
-  //   startTyping(); // Start the first typing
-
-  //   repeatInterval = setInterval(() => {
-  //     startTyping();
-  //   }, fullText.length * typingSpeed + 2000); // Time for the full typing + 1 second pause
-
-  //   const stopTypingAfter10Sec = setTimeout(() => {
-  //     clearInterval(repeatInterval);
-  //   }, 10000); // Stop the repetition after 10 seconds
-
-  //   return () => {
-  //     clearInterval(repeatInterval);
-  //     clearTimeout(stopTypingAfter10Sec);
-  //   };
-  // }, []);
 
   const handleScrollToTrips = () => {
     const tripsSection = document.getElementById("trips-section");
@@ -53,13 +17,13 @@ export default function Home() {
     <div className="w-full min-h-screen bg-transparent">
       <div className="flex items-center w-full min-h-screen">
         <div className="flex flex-col w-fit mx-auto items-center gap-5">
-          <h1 className="text-7xl font-bold font-nunito-sans">
-            <span className="text-[#6038fb]">Try </span>
-            <span className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent bg-clip-text">
-              DayGeine
-            </span>
-          </h1>
-          <h1 className="text-4xl text-[#FFFFFF] font-nunito-sans text-highlight">
+        <h1 className="text-7xl font-bold font-nunito-sans">
+          <span className="text-[#6038fb]">Try </span>
+          <span className="bg-gradient-to-r from-[#6038fb] to-[#60a5fa] text-transparent bg-clip-text">
+            DayGeine
+          </span>
+        </h1>
+          <h1 className="text-4xl text-[#FFFFF] font-nunito-sans text-highlight">
             from anywhere, to anywhere, within seconds
           </h1>
 
@@ -78,9 +42,10 @@ export default function Home() {
                 Get Started
               </Link>
             </SignedIn>
-            <button className="bg-[#a6d8ff] py-2 px-4 border-1 border-highlight text-white rounded-full text-lg hover:bg-[#6038fb] transition ease-in-out duration-300 hover:text-white">
+            <button className="bg-[#eadef7] py-2 px-4 border-1 border-highlight text-gray-700 rounded-full text-lg hover:bg-[#6038fb] transition ease-in-out duration-300 hover:text-white">
               Learn More
             </button>
+            
           </div>
         </div>
       </div>
@@ -117,10 +82,15 @@ export default function Home() {
             How it Works
           </h2>
           <p className="text-lg text-gray-700 text-center max-w-3xl">
-            Hear from our happy travelers about their experiences using
-            DayGeine. Our customers love the convenience and flexibility we
-            provide.
+            WorkFlow Chart 
           </p>
+          <Image
+          src="/FlowChart.png"
+          alt="Workflow"
+          width={800} 
+          height={600}
+          className="w-full max-w-3xl"
+        />
         </div>
       </div>
       <div className="min-h-screen bg-background transition-colors duration-1000">
