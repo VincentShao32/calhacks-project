@@ -24,8 +24,18 @@ const page = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const google_token = await getOAuthToken()
-    console.log(google_token)
+    //const google_token = await getOAuthToken()
+    var start_date = new Date(date)
+    var end_date = new Date(date)
+    end_date.setDate(start_date.getDate() + 1)
+    start_date = start_date.toISOString().substring(0, 19) + "-07:00"
+    end_date = end_date.toISOString().substring(0, 19) + "-07:00"
+    console.log(start_date)
+    const res = await fetch("http://localhost:8001/send-message", {
+        method: "POST",
+        body: JSON.stringify({ token: "ya29.a0AcM612xcTNlkkDLXn8-Zpmy4pvE_hbKHukMghTST6pqWkJiHWeXZJlslNs2m07SNm56cIlPHJOc6J1jrBHSCE2hVgJJAjBriTManl8lLqoN5BIksn14xCVJS-VJwPRNTlLcYfb7Yrdd5GMbux_kfmRrLUBB2ChlmiU9Ips-HaCgYKAVESARESFQHGX2MiuVFAnuDE_1UYVCHepKmRYg0175", preference: preferences, start_date: start_date, end_date: end_date }),
+    })
+    // console.log(google_token)
   }
   return (
     <div className='flex items-center bg-transparent min-h-screen'>
