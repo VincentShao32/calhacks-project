@@ -29,7 +29,7 @@ export default function Home() {
 
           <div className="flex gap-5 pt-8">
             <SignedOut>
-              <SignInButton className="bg-highlight text-white rounded-full py-2 px-4 text-lg hover:bg-gray-600">
+              <SignInButton className="bg-highlight text-white rounded-full py-2 px-4 text-lg z-10 hover:bg-[#6038fb] hover:scale-105 hover:shadow-md transition-all ease-in-out duration-300">
                 Get Started
               </SignInButton>
             </SignedOut>
@@ -37,12 +37,12 @@ export default function Home() {
               <Link
                 href="/trips"
                 onClick={handleScrollToTrips}
-                className="py-2 px-4 bg-highlight text-white rounded-full text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md transition-all ease-in-out duration-300"
+                className="py-2 z-10 px-4 bg-highlight text-white rounded-full text-lg hover:bg-[#6038fb] hover:scale-105 hover:shadow-md transition-all ease-in-out duration-300"
               >
                 Get Started
               </Link>
             </SignedIn>
-            <button className="bg-[#eadef7] py-2 px-4 border-1 border-highlight text-gray-700 rounded-full text-lg hover:bg-[#6038fb] transition ease-in-out duration-300 hover:text-white">
+            <button className="bg-[#eadef7] z-10 py-2 px-4 border-1 border-highlight text-gray-700 rounded-full text-lg hover:bg-[#6038fb] transition ease-in-out duration-300 hover:text-white">
               Learn More
             </button>
           </div>
